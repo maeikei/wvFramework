@@ -28,3 +28,4 @@ if(NOT WIN32)
 endif(NOT WIN32)
 
 add_subdirectory(3rdpartbuiltin)
+add_subdirectory(framework)
