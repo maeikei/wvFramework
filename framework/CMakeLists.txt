@@ -17,7 +17,8 @@ if(NOT WIN32)
     boost_system
     boost_filesystem
     boost_regex
-    cppnetlib
+    boost_thread
+    cppnetlib-server-parsers
   )
 endif(NOT WIN32)
 
