@@ -1,7 +1,12 @@
 osx
 ./b2 --prefix=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost toolset=clang cxxflags="-std=c++11 -stdlib=libc++" link=static install
 
+0.9.4
 cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++" -DCMAKE_CXX_LINK_FLAGS="-std=c++11 -stdlib=libc++"
+
+master
+cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib
+
 
 
 linux

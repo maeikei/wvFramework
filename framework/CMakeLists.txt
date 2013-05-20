@@ -1,6 +1,5 @@
 include_directories(.)
 link_directories(${CMAKE_BINARY_DIR}/3rdpart/boost/lib)
-link_directories(${CMAKE_BINARY_DIR}/3rdpart/cpp-netlib/lib)
 
 aux_source_directory(. framework_SRCS)
 
@@ -17,8 +16,6 @@ if(NOT WIN32)
     boost_system
     boost_filesystem
     boost_regex
-    boost_thread
-    cppnetlib-server-parsers
   )
 endif(NOT WIN32)
 

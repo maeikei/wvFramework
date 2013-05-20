@@ -1,55 +1,68 @@
-
-// Copyright 2010 Dean Michael Berris.
+// Copyright 2009 (c) Tarro, Inc.
+// Copyright 2009 (c) Dean Michael Berris <dberris@google.com>
+// Copyright 2012 Google, Inc.
 // Distributed under the Boost Software License, Version 1.0.
 // (See accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
+//
 
-#define BOOST_TEST_MODULE HTTP Asynchronous Server Tests
+//[ hello_world_server_main
+/*`
+ This is a part of the 'Hello World' example. It's used to
+ demonstrate how easy it is to set up an HTTP server.  All we do in
+ this example is create a request handler and run the server.
+ */
 
-#include <boost/config/warning_disable.hpp>
-#include <boost/network/include/http/server.hpp>
-#include <boost/network/utils/thread_pool.hpp>
-#include <boost/range/algorithm/find_if.hpp>
+#include <network/protocol/http/server/options.hpp>
+#include <network/protocol/http/server.hpp>
+#include <iostream>
 
-namespace net = boost::network;
-namespace http = boost::network::http;
-namespace utils = boost::network::utils;
+namespace http = network::http;
 
-struct async_hello_world;
-typedef http::async_server<async_hello_world> server;
+/*<< Defines the server. >>*/
+struct hello_world;
+typedef http::sync_server<hello_world> server;
 
-struct async_hello_world {
-    
-    struct is_content_length {
-        template <class Header>
-        bool operator()(Header const & header) {
-            return boost::iequals(name(header), "content-length");
-        }
-    };
-    
-    void operator()(server::request const & request, server::connection_ptr connection) {
-        static server::response_header headers[] = {
-            {"Connection", "close"}
-            , {"Content-Type", "text/plain"}
-            , {"Server", "cpp-netlib/0.9"}
-            , {"Content-Length", "13"}
-        };
-        static std::string hello_world("Hello, World!");
-        connection->set_status(server::connection::ok);
-        connection->set_headers(boost::make_iterator_range(headers, headers+4));
-        connection->write(hello_world);
+/*<< Defines the request handler.  It's a class that defines two
+ functions, `operator()` and `log()` >>*/
+struct hello_world {
+    /*<< This is the function that handles the incoming request. >>*/
+    void operator()(server::request const& request, server::response& response) {
+        //server::string_type ip = source(request);
+        //std::ostringstream data;
+        //data << "Hello, " << ip << "!";
+        //response = server::response::stock_reply(
+        //    server::response::ok, data.str());
+    }
+    /*<< It's necessary to define a log function, but it's ignored in
+     this example. >>*/
+    void log(...) {
+        // do nothing
     }
 };
 
-int main(int argc, char * argv[]) {
-    utils::thread_pool thread_pool(4);
-    async_hello_world handler;
-    std::string port = "8085";
-    if (argc > 1){
-        port = argv[1];
+int main(int argc, char* argv[]) {
+    
+    if (argc != 3) {
+        std::cerr << "Usage: " << argv[0] << " address port" << std::endl;
+        return 1;
     }
-    server instance("localhost", port, handler, thread_pool, http::_reuse_address=true);
-    instance.run();
+    
+    try {
+        /*<< Creates the request handler. >>*/
+        hello_world handler;
+        /*<< Creates the server. >>*/
+        http::server_options options;
+        server server_(options.address(argv[1]).port(argv[2]), handler);
+        /*<< Runs the server. >>*/
+        server_.run();
+    }
+    catch (std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return 1;
+    }
+    
     return 0;
 }
+//]
 
