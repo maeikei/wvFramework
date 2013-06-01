@@ -12,8 +12,6 @@
  demonstrate how easy it is to set up an HTTP server.  All we do in
  this example is create a request handler and run the server.
  */
-
-#include <network/protocol/http/server/options.hpp>
 #include <network/protocol/http/server.hpp>
 #include <iostream>
 
@@ -65,4 +63,3 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 //]
-
