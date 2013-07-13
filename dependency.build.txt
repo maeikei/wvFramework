@@ -4,10 +4,19 @@ osx
 0.9.4
 cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++" -DCMAKE_CXX_LINK_FLAGS="-std=c++11 -stdlib=libc++"
 
+
+
+0.10.1
+cmake ../cpp-netlib-0.10.1 -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++" -DCMAKE_CXX_LINK_FLAGS="-std=c++11 -stdlib=libc++"
+
+
+
+
 master
 cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_BUILD_TYPE=DEBUG
 
 
+cmake ../uri -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/uri -DCMAKE_BUILD_TYPE=DEBUG -DGTEST_INCLUDE_DIR=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/gtest/include -DGTEST_LIBRARY=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/gtest/lib/libgtest.a -DGTEST_MAIN_LIBRARY=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/gtest/lib/libgtest_main.a 
 
 linux
 cmake ../cpp-netlib -DCMAKE_INSTALL_PREFIX:PATH=/home/ma/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib
