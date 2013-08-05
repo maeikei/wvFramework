@@ -17,18 +17,16 @@ typedef http::server<WatorVaporEntry> server;
 struct WatorVaporEntry
 {
     /*<< This is the function that handles the incoming request. >>*/
-    void operator() (server::request const &request,
-                     server::response &response)
+    void operator() (server::request const &request,server::response &response)
     {
         server::string_type ip = source(request);
         unsigned int port = request.source_port;
+        server::string_type method = request.method;
+        server::string_type dest = request.destination;
         std::ostringstream data;
-        data << "Hello, " << ip << ':' << port << '!';
-        response = server::response::stock_reply(
-                                                 server::response::ok, data.str());
+        data << "Hello, " << ip << ':' << method << ':'<< port << '!' << dest;
+        response = server::response::stock_reply(server::response::ok, data.str());
     }
-    /*<< It's necessary to define a log function, but it's ignored in
-     this example. >>*/
     void log(...)
     {
         // do nothing
