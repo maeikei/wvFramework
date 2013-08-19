@@ -1,6 +1,9 @@
 osx
 ./b2 --prefix=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost toolset=clang cxxflags="-std=c++11 -stdlib=libc++" link=static install
 
+windows
+b2 --prefix=E:\develop\object\watorvapor\3rdpart\boost toolset=msvc cxxflags="-std=c++11" link=static install
+
 0.9.4
 cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++" -DCMAKE_CXX_LINK_FLAGS="-std=c++11 -stdlib=libc++"
 
@@ -9,8 +12,9 @@ cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rd
 0.10.1
 cmake ../cpp-netlib-0.10.1 -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11 -stdlib=libc++" -DCMAKE_CXX_LINK_FLAGS="-std=c++11 -stdlib=libc++"
 
-
-
+windows
+0.10.1
+cmake ../cpp-netlib-0.10.1 -DBOOST_ROOT=E:\develop\object\watorvapor\3rdpart\boost -DCMAKE_INSTALL_PREFIX:PATH=E:\develop\object\watorvapor\3rdpart\cpp-netlib -DCMAKE_CXX_FLAGS="-std=c++11" -DCMAKE_CXX_LINK_FLAGS="-std=c++11"
 
 master
 cmake ../cpp-netlib -DBOOST_ROOT=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/boost -DCMAKE_INSTALL_PREFIX:PATH=/Users/maeikei/workspace/watorvapor-dev/obj/3rdpart/cpp-netlib -DCMAKE_BUILD_TYPE=DEBUG
