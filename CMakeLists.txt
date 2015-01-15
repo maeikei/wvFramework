@@ -12,4 +12,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 #add_subdirectory(3rdpartbuiltin)
 add_subdirectory(framework)
-add_subdirectory(client/wvmake)
+add_subdirectory(wator)
+#add_subdirectory(client/wvmake)
