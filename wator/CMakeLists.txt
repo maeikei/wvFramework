@@ -8,4 +8,4 @@ add_executable(wator ${http_SRCS} )
 target_link_libraries( wator framework)
 
 
-install(TARGETS wator DESTINATION bin)
+install(TARGETS wator RUNTIME DESTINATION bin)
