@@ -3,4 +3,4 @@ all:
 	cd object && cmake ../
 	cd object && make 
 clean:
-	rm -f object
+	rm -rf object
