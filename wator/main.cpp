@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <boost/asio.hpp>
+using namespace std;
 extern int http_main(const string &ip,const string &port,const string &root);
 
 int main(int argc, char* argv[])
