@@ -4,3 +4,6 @@ all:
 	cd object && make 
 clean:
 	rm -rf object
+test:
+	cd approot && ../object/wator/wator
+	
