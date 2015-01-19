@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
 {
   core::get()->set_filter(trivial::severity >= trivial::info);
   
-  boost::filesystem::path full_path( boost::filesystem::current_path() );
-  BOOST_LOG_TRIVIAL(info) << "Current path is : " << full_path;
-  http_main("0.0.0.0","4447",full_path.string());
+  boost::filesystem::path pwd_full_path( boost::filesystem::current_path() );
+  LOG_INFO(pwd_full_path);
+  http_main("0.0.0.0","4447",pwd_full_path.string());
   return 0;
 }
