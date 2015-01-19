@@ -8,6 +8,7 @@ target_link_libraries( wator framework)
 target_link_libraries( wator 
   boost_system
   boost_filesystem
+  boost_log
 )
 
 install(TARGETS wator RUNTIME DESTINATION bin)
