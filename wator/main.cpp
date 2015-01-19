@@ -12,6 +12,6 @@ int main(int argc, char* argv[])
 {
   boost::filesystem::path full_path( boost::filesystem::current_path() );
   std::cout << "Current path is : " << full_path << std::endl;
-  http_main("0.0.0.0","4447","./");
+  http_main("0.0.0.0","4447",full_path.strint());
   return 0;
 }
