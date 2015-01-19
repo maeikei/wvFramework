@@ -2,6 +2,7 @@ project(watorvapor)
 cmake_minimum_required(VERSION 2.8)
 #include_directories(${PROJECT_SOURCE_DIR}/3rdpartbuiltin/leveldb-1.9.0/include)
 include_directories(${PROJECT_SOURCE_DIR}/framework/include)
+add_definitions(-DBOOST_LOG_DYN_LINK)
 
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 -pthread")
