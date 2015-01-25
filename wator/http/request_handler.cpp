@@ -15,6 +15,7 @@
 #include "mime_types.hpp"
 #include "reply.hpp"
 #include "request.hpp"
+#include "debug.h"
 
 namespace http {
 namespace server {
@@ -33,6 +34,7 @@ void request_handler::handle_request(const request& req, reply& rep)
     rep = reply::stock_reply(reply::bad_request);
     return;
   }
+  LOG_DEBUG(request_path);
 
   // Request path must be absolute and not contain "..".
   if (request_path.empty() || request_path[0] != '/'
@@ -56,6 +58,7 @@ void request_handler::handle_request(const request& req, reply& rep)
   {
     extension = request_path.substr(last_dot_pos + 1);
   }
+  LOG_DEBUG(extension);
 
   // Open the file to send back.
   std::string full_path = doc_root_ + request_path;
@@ -70,12 +73,15 @@ void request_handler::handle_request(const request& req, reply& rep)
   rep.status = reply::ok;
   char buf[512];
   while (is.read(buf, sizeof(buf)).gcount() > 0)
+  {
     rep.content.append(buf, is.gcount());
+  }
   rep.headers.resize(2);
   rep.headers[0].name = "Content-Length";
   rep.headers[0].value = std::to_string(rep.content.size());
   rep.headers[1].name = "Content-Type";
   rep.headers[1].value = mime_types::extension_to_type(extension);
+  LOG_DEBUG(buf);
 }
 
 bool request_handler::url_decode(const std::string& in, std::string& out)
