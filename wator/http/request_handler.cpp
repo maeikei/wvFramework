@@ -19,7 +19,7 @@
 #include "dispatch.hpp"
 using namespace wator;
 
-namespace http {
+namespace wator {
 namespace server {
 
 request_handler::request_handler(const std::string& doc_root)
@@ -132,4 +132,4 @@ bool request_handler::url_decode(const std::string& in, std::string& out)
 }
 
 } // namespace server
-} // namespace http
+} // namespace wator
