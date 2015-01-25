@@ -1,7 +1,7 @@
 #include "dispatch.hpp"
 using namespace wator;
-#include "reply.hpp"
-#include "request.hpp"
+#include "http/reply.hpp"
+#include "http/request.hpp"
 using namespace wator::server;
 #include "debug.h"
 
