@@ -19,7 +19,7 @@
 #include "request_handler.hpp"
 #include "request_parser.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 class connection_manager;
@@ -74,6 +74,6 @@ private:
 typedef std::shared_ptr<connection> connection_ptr;
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_CONNECTION_HPP
