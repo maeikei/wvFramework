@@ -12,7 +12,7 @@ extern int http_main(const string &ip,const string &port,const string &root);
 
 int main(int argc, char* argv[])
 {
-  core::get()->set_filter(trivial::severity >= trivial::info);
+  core::get()->set_filter(trivial::severity >= trivial::trace);
   
   boost::filesystem::path pwd_full_path( boost::filesystem::current_path() );
   LOG_INFO(pwd_full_path);
