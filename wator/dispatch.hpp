@@ -9,7 +9,7 @@ struct reply;
 struct request;
 } // namespace server
 } // namespace http
-namespace WatorVapor
+namespace wator
 {
   class Dispatcher
   {
@@ -22,5 +22,5 @@ namespace WatorVapor
       const http::server::request &req_;
       http::server::reply& rep_;
   };
-} // namespace WatorVapor
+} // namespace wator
 #endif// __DISPATCH_HPP__
