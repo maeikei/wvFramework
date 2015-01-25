@@ -2,10 +2,10 @@
 using namespace wator;
 #include "reply.hpp"
 #include "request.hpp"
-using namespace http::server;
+using namespace wator::server;
 #include "debug.h"
 
-Dispatcher::Dispatcher(const http::server::request &req,http::server::reply& rep)
+Dispatcher::Dispatcher(const wator::server::request &req,wator::server::reply& rep)
 :req_(req)
 ,rep_(rep)
 {
