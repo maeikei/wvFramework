@@ -13,7 +13,7 @@
 
 #include <tuple>
 
-namespace http {
+namespace wator {
 namespace server {
 
 struct request;
@@ -91,6 +91,6 @@ private:
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_REQUEST_PARSER_HPP
