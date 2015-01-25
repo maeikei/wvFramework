@@ -14,7 +14,7 @@
 #include "connection_manager.hpp"
 #include "request_handler.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 connection::connection(boost::asio::ip::tcp::socket socket,
@@ -91,4 +91,4 @@ void connection::do_write()
 }
 
 } // namespace server
-} // namespace http
+} // namespace wator
