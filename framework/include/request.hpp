@@ -12,7 +12,7 @@ namespace wator {
 namespace http {
 
 /// A request received from a client.
-struct request
+struct Request
 {
   std::string method;
   std::string uri;
