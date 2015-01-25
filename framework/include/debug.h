@@ -1,5 +1,9 @@
 #ifndef __DEBUG_H__
 #define __DEBUG_H__
+#include <boost/log/trivial.hpp>
+#include <boost/log/core.hpp>
+#include <boost/log/expressions.hpp>
+using namespace boost::log;
 
 #define LOG_TRACE(x) BOOST_LOG_TRIVIAL(trace) << __func__ << " " << __LINE__ << ":" << #x << "=<" << x << ">\n";
 #define LOG_DEBUG(x) BOOST_LOG_TRIVIAL(debug) << __func__ << " " << __LINE__ << ":" << #x << "=<" << x << ">\n";
