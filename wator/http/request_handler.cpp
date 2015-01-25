@@ -44,11 +44,13 @@ void request_handler::handle_request(const request& req, reply& rep)
     return;
   }
 
+#if 0 // no defult to index.html,but to routing rule
   // If path ends in slash (i.e. is a directory) then add "index.html".
   if (request_path[request_path.size() - 1] == '/')
   {
     request_path += "index.html";
   }
+#endif 
 
   // Determine the file extension.
   std::size_t last_slash_pos = request_path.find_last_of("/");
