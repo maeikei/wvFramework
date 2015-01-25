@@ -15,7 +15,7 @@
 #include <vector>
 #include "header.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 /// A request received from a client.
@@ -28,7 +28,7 @@ struct request
   std::vector<header> headers;
 };
 
-} // namespace server
+} // namespace wator
 } // namespace http
 
 #endif // HTTP_REQUEST_HPP
