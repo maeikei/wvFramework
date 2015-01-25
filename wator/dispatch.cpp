@@ -21,6 +21,13 @@ Dispatcher::Dispatcher(const http::server::request &req,http::server::reply& rep
 }
 bool Dispatcher::run(void)
 {
+// Decode url to path.
+  std::string request_path;
+  if (!url_decode(req_.uri, request_path))
+  {
+    return false;
+  }
+  LOG_DEBUG(request_path);
   return true;
 }
  
