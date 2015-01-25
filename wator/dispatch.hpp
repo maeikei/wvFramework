@@ -1,6 +1,7 @@
 #ifndef __DISPATCH_HPP__
 #define __DISPATCH_HPP__
-
+#include <string>
+using namespace std;
 
 namespace http {
 namespace server {
