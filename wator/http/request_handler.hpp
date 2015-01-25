@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace http {
+namespace wator {
 namespace server {
 
 struct reply;
@@ -42,6 +42,6 @@ private:
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_REQUEST_HANDLER_HPP
