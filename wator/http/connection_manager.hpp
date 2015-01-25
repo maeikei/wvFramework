@@ -14,7 +14,7 @@
 #include <set>
 #include "connection.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 /// Manages open connections so that they may be cleanly stopped when the server
@@ -43,6 +43,6 @@ private:
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_CONNECTION_MANAGER_HPP
