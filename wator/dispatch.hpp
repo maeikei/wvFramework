@@ -13,9 +13,10 @@ namespace WatorVapor
   class Dispatcher
   {
     public:
-      Dispatcher();
+      Dispatcher(request &req,reply& rep);
     private:
-      
+      request &req_;
+      reply& rep_;
   };
 } // namespace WatorVapor
 #endif// __DISPATCH_HPP__
