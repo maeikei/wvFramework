@@ -16,6 +16,8 @@ namespace WatorVapor
       Dispatcher(const http::server::request &req,http::server::reply& rep);
       bool run(void);
     private:
+      bool url_decode(const std::string& in, std::string& out);
+    private:
       const http::server::request &req_;
       http::server::reply& rep_;
   };
