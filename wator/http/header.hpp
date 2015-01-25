@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace http {
+namespace wator {
 namespace server {
 
 struct header
@@ -23,6 +23,6 @@ struct header
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_HEADER_HPP
