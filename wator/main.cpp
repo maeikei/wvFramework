@@ -5,11 +5,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#include <boost/filesystem.hpp>
-#include <boost/log/trivial.hpp>
-#include <boost/log/core.hpp>
-#include <boost/log/expressions.hpp>
-using namespace boost::log;
 #include "debug.h"
 
 extern int http_main(const string &ip,const string &port,const string &root);
