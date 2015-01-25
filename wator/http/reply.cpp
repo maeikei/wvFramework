@@ -11,7 +11,7 @@
 #include "reply.hpp"
 #include <string>
 
-namespace http {
+namespace wator {
 namespace server {
 
 namespace status_strings {
@@ -252,4 +252,4 @@ reply reply::stock_reply(reply::status_type status)
 }
 
 } // namespace server
-} // namespace http
+} // namespace wator
