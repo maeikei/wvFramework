@@ -6,8 +6,8 @@ using namespace http::server;
 #include "debug.h"
 
 Dispatcher::Dispatcher(const http::server::request &req,http::server::reply& rep)
-:_req(req)
-,_rep(rep)
+:req_(req)
+,rep_(rep)
 {
   
 }
