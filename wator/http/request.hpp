@@ -29,6 +29,6 @@ struct request
 };
 
 } // namespace wator
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_REQUEST_HPP
