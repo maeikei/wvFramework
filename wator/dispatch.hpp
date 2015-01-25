@@ -3,12 +3,12 @@
 #include <string>
 using namespace std;
 
-namespace http {
+namespace wator {
 namespace server {
 struct reply;
 struct request;
 } // namespace server
-} // namespace http
+} // namespace wator
 namespace wator
 {
   class Dispatcher
