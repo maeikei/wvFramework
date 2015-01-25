@@ -11,7 +11,7 @@
 #include "request_parser.hpp"
 #include "request.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 request_parser::request_parser()
@@ -312,4 +312,4 @@ bool request_parser::is_digit(int c)
 }
 
 } // namespace server
-} // namespace http
+} // namespace wator
