@@ -1,4 +1,6 @@
 include_directories(.)
+include_directories(./http)
+
 aux_source_directory(./http http_SRCS)
 
 
