@@ -17,7 +17,7 @@
 #include "request.hpp"
 #include "debug.h"
 #include "dispatch.hpp"
-using namespace WatorVapor;
+using namespace wator;
 
 namespace http {
 namespace server {
