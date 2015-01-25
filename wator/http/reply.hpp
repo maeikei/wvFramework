@@ -16,7 +16,7 @@
 #include <boost/asio.hpp>
 #include "header.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 /// A reply to be sent to a client.
@@ -59,6 +59,6 @@ struct reply
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_REPLY_HPP
