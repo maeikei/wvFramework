@@ -10,7 +10,7 @@
 
 #include "connection_manager.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 connection_manager::connection_manager()
@@ -37,4 +37,4 @@ void connection_manager::stop_all()
 }
 
 } // namespace server
-} // namespace http
+} // namespace wator
