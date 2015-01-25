@@ -1,5 +1,5 @@
 #include "dispatch.hpp"
-using namespace WatorVapor;
+using namespace wator;
 #include "reply.hpp"
 #include "request.hpp"
 using namespace http::server;
