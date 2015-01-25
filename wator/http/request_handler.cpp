@@ -16,6 +16,8 @@
 #include "reply.hpp"
 #include "request.hpp"
 #include "debug.h"
+#include "dispatch.hpp"
+using namespace WatorVapor;
 
 namespace http {
 namespace server {
@@ -27,6 +29,10 @@ request_handler::request_handler(const std::string& doc_root)
 
 void request_handler::handle_request(const request& req, reply& rep)
 {
+  Dispatcher dispatch(req,rep);
+  if(dispatch.run()){
+    return;
+  }
   // Decode url to path.
   std::string request_path;
   if (!url_decode(req.uri, request_path))
