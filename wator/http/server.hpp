@@ -17,7 +17,7 @@
 #include "connection_manager.hpp"
 #include "request_handler.hpp"
 
-namespace http {
+namespace wator {
 namespace server {
 
 /// The top-level class of the HTTP server.
@@ -62,6 +62,6 @@ private:
 };
 
 } // namespace server
-} // namespace http
+} // namespace wator
 
 #endif // HTTP_SERVER_HPP
