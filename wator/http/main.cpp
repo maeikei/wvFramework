@@ -23,7 +23,7 @@ int http_main(const string &ip,const string &port,const string &root)
     LOG_INFO(ip);
     LOG_INFO(port);
     LOG_INFO(root);
-    http::server::server s(ip, port, root);
+    wator::server::server s(ip, port, root);
 
     // Run the server until stopped.
     s.run();
