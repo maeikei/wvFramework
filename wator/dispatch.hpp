@@ -13,10 +13,11 @@ namespace WatorVapor
   class Dispatcher
   {
     public:
-      Dispatcher(request &req,reply& rep);
+      Dispatcher(http::server::request &req,http::server::reply& rep);
+      bool run(void);
     private:
-      request &req_;
-      reply& rep_;
+      http::server::request &req_;
+      http::server::reply& rep_;
   };
 } // namespace WatorVapor
 #endif// __DISPATCH_HPP__
