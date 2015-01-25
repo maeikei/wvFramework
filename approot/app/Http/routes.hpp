@@ -10,9 +10,5 @@
 */
 struct router
 {
-  router(void) 
-  {
-    Route::get('/', 'HomeController@index');
-    Route::get('home', 'HomeController@index');
-  }
+  const string root = "HomeController@index"; /// "/"
 };
