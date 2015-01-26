@@ -15,7 +15,7 @@
 using namespace std;
 #include "debug.h"
 
-int http_main(const string &ip,const string &port,const string &root)
+void http_main(const string &ip,const string &port,const string &root)
 {
   try
   {
@@ -33,5 +33,5 @@ int http_main(const string &ip,const string &port,const string &root)
     std::cerr << "exception: " << e.what() << "\n";
   }
 
-  return 0;
+  return;
 }
