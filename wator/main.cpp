@@ -9,6 +9,8 @@ using namespace std;
 #include "debug.h"
 
 extern int http_main(const string &ip,const string &port,const string &root);
+extern int collector_main(const string &root);
+
 
 int main(int argc, char* argv[])
 {
@@ -17,5 +19,6 @@ int main(int argc, char* argv[])
   boost::filesystem::path pwd_full_path( boost::filesystem::current_path() );
   LOG_INFO(pwd_full_path);
   http_main("0.0.0.0","4447",pwd_full_path.string() + "/public");
+  collector_main(pwd_full_path.string());
   return 0;
 }
