@@ -1,5 +1,3 @@
-BaseController
-
 //
 // controller.hpp
 // ~~~~~~~~~~~
@@ -13,14 +11,10 @@ BaseController
 namespace wator {
 namespace http {
 
-/// A request received from a client.
-struct Request
+BaseController
 {
-  std::string method;
-  std::string uri;
-  int http_version_major;
-  int http_version_minor;
-  std::map<string,string> headers;
+  public:
+    BaseController();
 };
 } // namespace http
 } // namespace wator
