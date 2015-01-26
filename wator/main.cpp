@@ -18,7 +18,8 @@ int main(int argc, char* argv[])
   
   boost::filesystem::path pwd_full_path( boost::filesystem::current_path() );
   LOG_INFO(pwd_full_path);
-  http_main("0.0.0.0","4447",pwd_full_path.string() + "/public");
   collector_main(pwd_full_path.string());
+
+  http_main("0.0.0.0","4447",pwd_full_path.string() + "/public");
   return 0;
 }
