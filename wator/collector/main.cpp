@@ -10,5 +10,12 @@ void collector_main(const string &root)
   fs::path controller(root);
   controller += "/app/Http/Controllers";
   LOG_INFO(controller);
+  if(fs::is_directory(controller))
+  {
+    for(auto& entry : boost::make_iterator_range(fs::directory_iterator(controller), {}))
+    {
+      LOG_INFO(entry);
+    }
+  }
   
 }
