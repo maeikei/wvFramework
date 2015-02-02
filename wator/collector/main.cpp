@@ -8,6 +8,7 @@ void collector_main(const string &root)
 {
   LOG_INFO(root);
   fs::path controller(root);
+  controller += "/app/Http/Controllers";
   LOG_INFO(controller);
   
 }
