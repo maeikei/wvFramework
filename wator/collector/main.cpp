@@ -6,7 +6,7 @@ using namespace std;
 void collector_main(const string &root)
 {
   LOG_INFO(root);
-  boost::filesystem::controller(root);
+  boost::filesystem::path controller(root);
   LOG_INFO(controller);
   
 }
