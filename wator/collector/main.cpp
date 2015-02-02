@@ -15,7 +15,7 @@ void collector_main(const string &root)
     for(auto& entry : boost::make_iterator_range(fs::directory_iterator(controller), {}))
     {
       LOG_INFO(entry);
-      LOG_INFO(entry.leaf());
+      LOG_INFO(entry.path().leaf());
     }
   }
   
