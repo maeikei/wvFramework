@@ -8,7 +8,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-struct router
+class router
 {
-  const string root = "HomeController@index"; /// "/"
+  public:
+    const string root_ = "HomeController@index"; /// "/"
 };
