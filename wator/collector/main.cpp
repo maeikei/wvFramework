@@ -1,8 +1,12 @@
 #include <string>
+#include <list>
 using namespace std;
 #include "debug.h"
 #include <boost/filesystem.hpp>
 namespace fs = boost::filesystem;
+
+static list<fs::path> gAllControllers;
+fs::path gBaseController;
 
 void collector_main(const string &root)
 {
@@ -14,9 +18,20 @@ void collector_main(const string &root)
   {
     for(auto& entry : boost::make_iterator_range(fs::directory_iterator(controller), {}))
     {
-      LOG_INFO(entry);
-      LOG_INFO(entry.path().leaf());
+      if("Controller.hpp" == entry.path().leaf().string())
+      {
+        gBaseController = entry.path();
+      }
+      else
+      {
+        gAllControllers.push_back(entry.path());
+      }
     }
   }
-  
+  /// dump info
+  LOG_INFO(gBaseController);
+  for(auto &ctrl: gAllControllers)
+  {
+    LOG_INFO(ctrl);
+  }
 }
