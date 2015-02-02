@@ -5,8 +5,12 @@ using namespace std;
 #include <boost/filesystem.hpp>
 namespace fs = boost::filesystem;
 
-static list<fs::path> gAllControllers;
+list<fs::path> gAllControllers;
 fs::path gBaseController;
+
+list<fs::path> gAllModels;
+fs::path gBaseModel;
+
 
 void collector_main(const string &root)
 {
@@ -28,10 +32,28 @@ void collector_main(const string &root)
       }
     }
   }
-  /// dump info
-  LOG_INFO(gBaseController);
-  for(auto &ctrl: gAllControllers)
+
+  fs::path model(root);
+  model += "/app/Models";
+  LOG_INFO(model);
+  if(fs::is_directory(model))
   {
-    LOG_INFO(ctrl);
+    for(auto& entry : boost::make_iterator_range(fs::directory_iterator(model), {}))
+    {
+      if("Model.hpp" == entry.path().leaf().string())
+      {
+        gBaseModel = entry.path();
+      }
+      else
+      {
+        gAllModels.push_back(entry.path());
+      }
+    }
+  }
+  /// dump info
+  LOG_INFO(gBaseModel);
+  for(auto &mdls: gAllModels)
+  {
+    LOG_INFO(mdls);
   }
 }
