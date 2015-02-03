@@ -5,6 +5,7 @@ using namespace std;
 namespace fs = boost::filesystem;
 
 #include "ACController.hpp"
+#include "ACBuilder.hpp"
 using namespace wator::ac;
 #include "debug.h"
 
@@ -19,6 +20,12 @@ fs::path gBaseModel;
 void collector_main(const string &root)
 {
   LOG_INFO(root);
+  
+  ACBuilder builder(root);
+  if(false == builder.gen())
+  {
+    return;
+  }
   fs::path controller(root);
   controller += "/app/Http/Controllers";
   LOG_INFO(controller);
@@ -41,6 +48,10 @@ void collector_main(const string &root)
   for(auto &ctrl: gAllControllers)
   {
     ACController acCtrl(ctrl,root);
+    if(false == acCtrl.gen())
+    {
+      return;
+    }
     LOG_INFO(ctrl);
   }
 
