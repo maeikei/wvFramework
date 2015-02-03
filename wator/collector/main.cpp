@@ -32,6 +32,12 @@ void collector_main(const string &root)
       }
     }
   }
+  /// dump info
+  LOG_INFO(gBaseController);
+  for(auto &ctrl: gAllControllers)
+  {
+    LOG_INFO(ctrl);
+  }
 
   fs::path model(root);
   model += "/app/Models";
