@@ -9,7 +9,7 @@ namespace ac {
   class ACBuilder
   {
     public:
-      ACBuilder(const fs::path &p,const std::string &root);
+      ACBuilder(const std::string &root);
     private:
       ACBuilder();
   };
