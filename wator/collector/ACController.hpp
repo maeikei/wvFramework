@@ -6,6 +6,8 @@ namespace ac {
   {
     public:
       ACController();
+    private:
+      ACController();
   }
 } // ac
 } // wator
