@@ -12,7 +12,7 @@ namespace ac {
       ACController(const fs::path &p,const std::string &root);
     private:
       ACController();
-  }
+  };
 } // ac
 } // wator
 
