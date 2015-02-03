@@ -1,9 +1,12 @@
 #include <string>
 #include <list>
 using namespace std;
-#include "debug.h"
 #include <boost/filesystem.hpp>
 namespace fs = boost::filesystem;
+
+#include "ACController.hpp"
+#include "debug.h"
+
 
 list<fs::path> gAllControllers;
 fs::path gBaseController;
@@ -36,6 +39,7 @@ void collector_main(const string &root)
   LOG_INFO(gBaseController);
   for(auto &ctrl: gAllControllers)
   {
+    ACController acCtrl(ctrl,root);
     LOG_INFO(ctrl);
   }
 
