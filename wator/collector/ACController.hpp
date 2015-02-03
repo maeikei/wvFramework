@@ -4,7 +4,8 @@ namespace wator {
 namespace ac {
   class ACController
   {
-    
+    public:
+      ACController();
   }
 } // ac
 } // wator
