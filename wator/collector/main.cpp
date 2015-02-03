@@ -5,6 +5,7 @@ using namespace std;
 namespace fs = boost::filesystem;
 
 #include "ACController.hpp"
+using namespace wator::ac;
 #include "debug.h"
 
 
