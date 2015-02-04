@@ -14,7 +14,7 @@ namespace ac {
     private:
       ACBuilder();
     private:
-      string output_;
+      std::string output_;
   };
 } // ac
 } // wator
