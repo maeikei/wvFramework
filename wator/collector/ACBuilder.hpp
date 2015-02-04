@@ -13,6 +13,8 @@ namespace ac {
       bool gen(void);
     private:
       ACBuilder();
+    private:
+      string output_;
   };
 } // ac
 } // wator
