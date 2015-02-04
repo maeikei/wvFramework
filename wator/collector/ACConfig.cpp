@@ -1,6 +1,6 @@
 #include "ACConfig.hpp"
 using namespace wator::ac;
-ACConfig::ACConfig(const std::string &root)
+ACConfig::ACConfig(const fs::path &root)
 {
   
 }
