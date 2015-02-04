@@ -47,12 +47,12 @@ void collector_main(const string &root)
   LOG_INFO(gBaseController);
   for(auto &ctrl: gAllControllers)
   {
+    LOG_INFO(ctrl);
     ACController acCtrl(ctrl,root);
     if(false == acCtrl.gen())
     {
       return;
     }
-    LOG_INFO(ctrl);
   }
 
   fs::path model(root);
@@ -74,8 +74,13 @@ void collector_main(const string &root)
   }
   /// dump info
   LOG_INFO(gBaseModel);
-  for(auto &mdls: gAllModels)
+  for(auto &model: gAllModels)
   {
-    LOG_INFO(mdls);
+    LOG_INFO(model);
+    ACController acCtrl(ctrl,root);
+    if(false == acCtrl.gen())
+    {
+      return;
+    }
   }
 }
