@@ -10,6 +10,7 @@ namespace ac {
   {
     public:
       ACConfig(const std::string &root);
+      bool gen(void);
     private:
       ACConfig();
   };
