@@ -18,7 +18,7 @@ list<fs::path> gAllModels;
 fs::path gBaseModel;
 
 
-void collector_main(const string &root)
+void collector_main(const fs::path &root)
 {
   LOG_INFO(root);
   
