@@ -9,7 +9,7 @@ namespace ac {
   class ACController
   {
     public:
-      ACController(const fs::path &p,const std::string &root);
+      ACController(const fs::path &p,const fs::path &root);
       bool gen(void);
     private:
       ACController();
