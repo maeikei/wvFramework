@@ -10,6 +10,7 @@ namespace ac {
   {
     public:
       ACBuilder(const std::string &root);
+      bool gen(void);
     private:
       ACBuilder();
   };
