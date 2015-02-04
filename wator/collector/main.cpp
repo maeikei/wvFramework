@@ -77,8 +77,8 @@ void collector_main(const string &root)
   for(auto &model: gAllModels)
   {
     LOG_INFO(model);
-    ACController acCtrl(ctrl,root);
-    if(false == acCtrl.gen())
+    ACModel acModel(model,root);
+    if(false == acModel.gen())
     {
       return;
     }
