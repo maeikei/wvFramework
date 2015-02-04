@@ -9,7 +9,7 @@ namespace ac {
   class ACConfig
   {
     public:
-      ACConfig(const std::string &root);
+      ACConfig(const fs::path &root);
       bool gen(void);
     private:
       ACConfig();
