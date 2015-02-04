@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
   
   fs::path pwd_full_path( fs::current_path() );
   LOG_INFO(pwd_full_path);
-  collector_main(pwd_full_path;
+  collector_main(pwd_full_path);
 
   if (vm.count("server"))
   {
