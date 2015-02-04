@@ -18,16 +18,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 ACBuilder::ACBuilder(const fs::path &root)
 :output_()
 {
-  std::list<std::string> results;
-  boost::split(results, root, boost::is_any_of("/"));
-  auto name = results.rbegin();
-  LOG_INFO(name);
   output_ += "project(";
-  output_ += name;
+  output_ += root.leaf().string();
   output_ += ")\n";
   output_ += "cmake_minimum_required(VERSION 2.8)\n";
   output_ += "include_directories(";
-  output_ += root;
+  output_ += root.string();
   output_ += ")\n";
   output_ += "set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -std=c11 -pthread\")\n";
   output_ += "set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -std=c++11 -pthread\")\n";
