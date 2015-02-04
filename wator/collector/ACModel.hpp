@@ -9,7 +9,7 @@ namespace ac {
   class ACModel
   {
     public:
-      ACModel(const fs::path &p,const std::string &root);
+      ACModel(const fs::path &p,const fs::path &root);
       bool gen(void);
     private:
       ACModel();
