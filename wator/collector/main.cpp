@@ -6,6 +6,7 @@ namespace fs = boost::filesystem;
 
 #include "ACController.hpp"
 #include "ACBuilder.hpp"
+#include "ACModel.hpp"
 using namespace wator::ac;
 #include "debug.h"
 
