@@ -4,3 +4,7 @@ ACBuilder::ACBuilder(const std::string &root)
 {
   
 }
+bool ACBuilder::gen(void)
+{
+  return true;
+}
