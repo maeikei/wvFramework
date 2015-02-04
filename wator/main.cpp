@@ -13,7 +13,7 @@ namespace po = boost::program_options;
 #include "debug.h"
 
 extern void http_main(const string &ip,const string &port,const string &root);
-extern void collector_main(const string &root);
+extern void collector_main(const fs::path &root);
 
 
 int main(int argc, char* argv[])
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
   
   fs::path pwd_full_path( fs::current_path() );
   LOG_INFO(pwd_full_path);
-  collector_main(pwd_full_path.string());
+  collector_main(pwd_full_path;
 
   if (vm.count("server"))
   {
