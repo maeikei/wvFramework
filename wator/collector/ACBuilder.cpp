@@ -37,7 +37,7 @@ ACBuilder::ACBuilder(const fs::path &root)
   cmake_ = boost::algorithm::replace_all_copy(cmake_,"#{root}",root.string());
   
   
-  build_cmd_ = boost::algorithm::replace_all_copy(build_cmd_,"#{root}",root.string());
+  buildCmd_ = boost::algorithm::replace_all_copy(buildCmd_,"#{root}",root.string());
 /*  
   cmake_ += "project(";
   cmake_ += root.leaf().string();
