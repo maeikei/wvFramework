@@ -5,6 +5,8 @@ using namespace wator::ac;
 #include <list>
 #include <boost/algorithm/string.hpp>
 
+using namespace std;
+
 const static string constStrCMakeTemplate = "\n"
 "project({name})\n"
 "cmake_minimum_required(VERSION 2.8)\n"
