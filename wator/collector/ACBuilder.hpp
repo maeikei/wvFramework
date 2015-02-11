@@ -15,6 +15,7 @@ namespace ac {
       ACBuilder();
     private:
       std::string cmake_;
+      std::string build_cmd_;
   };
 } // ac
 } // wator
