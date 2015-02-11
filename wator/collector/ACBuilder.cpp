@@ -29,7 +29,7 @@ clean:\n
 
 ACBuilder::ACBuilder(const fs::path &root)
 :cmake_(constStrCMakeTemplate)
-,build_cmd_(constStrBuildCmdTemplate)
+,buildCmd_(constStrBuildCmdTemplate)
 {
 /*  
   cmake_ += "project(";
@@ -54,6 +54,6 @@ ACBuilder::ACBuilder(const fs::path &root)
 bool ACBuilder::gen(void)
 {
   LOG_INFO(cmake_);
-  LOG_INFO(build_cmd_);
+  LOG_INFO(buildCmd_);
   return true;
 }
