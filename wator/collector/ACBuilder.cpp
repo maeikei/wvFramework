@@ -5,26 +5,25 @@ using namespace wator::ac;
 #include <list>
 #include <boost/algorithm/string.hpp>
 
-const static string constStrCMakeTemplate = "\n\
-project({name})\n\
-cmake_minimum_required(VERSION 2.8)\n\
-include_directories({root})\n\
-set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -std=c11 -pthread\")\n\
-set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -std=c++11 -pthread\")\n\
-set(CMAKE_EXE_LINKER_FLAGS \"${CMAKE_EXE_LINKER_FLAGS} -std=c++11 -pthread\")\n\
-set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -Wall\")\n\
-set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -Wall\")\n\
-";
+const static string constStrCMakeTemplate = "\n"
+"project({name})\n"
+"cmake_minimum_required(VERSION 2.8)\n"
+"include_directories({root})\n"
+"set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -std=c11 -pthread\")\n"
+"set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -std=c++11 -pthread\")\n"
+"set(CMAKE_EXE_LINKER_FLAGS \"${CMAKE_EXE_LINKER_FLAGS} -std=c++11 -pthread\")\n"
+"set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -Wall\")\n"
+"set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -Wall\")\n"
+;
 
 
-const static string constStrBuildCmdTemplate = 
-"\n\
-all:\n
-  mkdir -p {root}/cache/build/objects\n
-  cd {root}/cache/build/objects && cmake -DCMAKE_INSTALL_PREFIX={root}/cache/exec/\n
-  cd {root}/cache/build/objects && make install\n
-clean:\n
-";
+const static string constStrBuildCmdTemplate = "\n"
+"all:\n"
+"\t mkdir -p {root}/cache/build/objects\n"
+"\t cd {root}/cache/build/objects && cmake -DCMAKE_INSTALL_PREFIX={root}/cache/exec/\n"
+"\t cd {root}/cache/build/objects && make install\n"
+"clean:\n"
+;
 
 
 
