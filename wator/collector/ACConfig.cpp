@@ -38,9 +38,13 @@ bool ACConfig::gen(void)
       LOG_INFO(root_.string() + "/cache/build/src/config.cpp");
     }
   }
-  catch(const exception & e)
+  catch(exception & e)
   {
     LOG_FATAL(e.what());
-  } 
+  }
+  catch(FileException& e)
+  {
+    LOG_FATAL(e.what());
+  }
   return true;
 }
