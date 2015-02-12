@@ -5,11 +5,11 @@ using namespace std;
 const static string constStrConfigCppTemplate = 
 "/*Auto generated file DO not modify!!!! */\n"
 "namespace wator {\n"
-"namespace ag {\n"
+"namespace autogen {\n"
 "#include <config/app.hpp>\n"
-"} // ag\n"
+"} // autogen\n"
 "} // wator\n"
-"wator::ag::app globalApp;"
+"wator::autogen::app globalApp;"
 "\n"
 ;
 
