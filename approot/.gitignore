@@ -1,5 +1,5 @@
-./CMakeLists.txt
-./build.mk
-./build.bat
-./cache/build
-./runtime
+CMakeLists.txt
+build.mk
+build.bat
+cache/build
+runtime
