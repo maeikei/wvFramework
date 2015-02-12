@@ -74,7 +74,7 @@ bool ACBuilder::gen(void)
     {
       ofstream of;
       of.open(root_.string() + "/build.mk");
-      of << cmake_;
+      of << buildCmd_;
       of.close();
     }
   }
