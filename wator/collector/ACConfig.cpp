@@ -1,5 +1,7 @@
 #include "ACConfig.hpp"
 using namespace wator::ac;
+#include <list>
+#include <fstream>
 using namespace std;
 
 #include "debug.h"
