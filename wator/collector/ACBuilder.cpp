@@ -40,7 +40,7 @@ const static string constStrCMakeTemplate = "\n"
 const static string constStrBuildCmdTemplate = "\n"
 "all:\n"
 "\t mkdir -p #{root}/cache/build/objects\n"
-"\t cd #{root}/cache/build/objects && cmake -DCMAKE_INSTALL_PREFIX=#{root}/runtime/\n"
+"\t cd #{root}/cache/build/objects && cmake -DCMAKE_INSTALL_PREFIX=#{root}/runtime/ #{root} \n"
 "\t cd #{root}/cache/build/objects && make install\n"
 "clean:\n"
 ;
