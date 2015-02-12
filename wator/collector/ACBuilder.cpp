@@ -3,9 +3,11 @@ using namespace wator::ac;
 #include "debug.h"
 
 #include <list>
+#include <fstream>
+using namespace std;
+
 #include <boost/algorithm/string.hpp>
 
-using namespace std;
 
 const static string constStrCMakeTemplate = "\n"
 "project(#{name})\n"
@@ -34,6 +36,7 @@ const static string constStrCMakeTemplate = "\n"
 ;
 
 
+
 const static string constStrBuildCmdTemplate = "\n"
 "all:\n"
 "\t mkdir -p #{root}/cache/build/objects\n"
@@ -59,5 +62,25 @@ bool ACBuilder::gen(void)
 {
   LOG_INFO(cmake_);
   LOG_INFO(buildCmd_);
+  try
+  {
+    {
+      ofstream of;
+      of.open(root.string() + "/CMakeLists.txt");
+      of << cmake_;
+      of.close();
+    }
+    {
+      ofstream of;
+      of.open(root.string() + "/build.mk");
+      of << cmake_;
+      of.close();
+    }
+  }
+  catch(const exception & e)
+  {
+    LOG_FATAL(e.what());
+  }
+  
   return true;
 }
