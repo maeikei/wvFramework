@@ -14,6 +14,7 @@ namespace ac {
     private:
       ACBuilder();
     private:
+      fs::path root_;
       std::string cmake_;
       std::string buildCmd_;
   };
