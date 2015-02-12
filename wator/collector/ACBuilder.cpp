@@ -70,13 +70,13 @@ bool ACBuilder::gen(void)
   {
     {
       ofstream of;
-      of.open(root_.string() + "/CMakeLists.txt");
+      of.open(root_.string() + "/CMakeLists.txt",fstream::out);
       of << cmake_;
       of.close();
     }
     {
       ofstream of;
-      of.open(root_.string() + "/build.mk");
+      of.open(root_.string() + "/build.mk",fstream::out);
       of << buildCmd_;
       of.close();
     }
