@@ -26,6 +26,11 @@ const static string constStrCMakeTemplate = "\n"
 "    \"config/*.hpp\"\n"
 "    \"config/*.cpp\"\n"
 ")\n"
+"file(GLOB ac_SRC\n"
+"    \"cache/build/ac/*.hpp\"\n"
+"    \"cache/build/ac/*.cpp\"\n"
+")\n"
+"add_library(#{name} SHARED ${orignal_SRC} ${ac_SRC})"
 ;
 
 
