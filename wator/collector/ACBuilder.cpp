@@ -48,7 +48,8 @@ const static string constStrBuildCmdTemplate = "\n"
 
 
 ACBuilder::ACBuilder(const fs::path &root)
-:cmake_(constStrCMakeTemplate)
+:root_(root)
+,cmake_(constStrCMakeTemplate)
 ,buildCmd_(constStrBuildCmdTemplate)
 {
   cmake_ = boost::algorithm::replace_all_copy(cmake_,"#{name}",root.leaf().string());
@@ -66,13 +67,13 @@ bool ACBuilder::gen(void)
   {
     {
       ofstream of;
-      of.open(root.string() + "/CMakeLists.txt");
+      of.open(root_.string() + "/CMakeLists.txt");
       of << cmake_;
       of.close();
     }
     {
       ofstream of;
-      of.open(root.string() + "/build.mk");
+      of.open(root_.string() + "/build.mk");
       of << cmake_;
       of.close();
     }
