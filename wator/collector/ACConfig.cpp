@@ -8,6 +8,7 @@ using namespace std;
 
 const static string constStrConfigCppTemplate = 
 "/*Auto generated file DO not modify!!!! */\n"
+"#include <string>\n"
 "namespace wator {\n"
 "namespace autogen {\n"
 "#include <config/app.hpp>\n"
