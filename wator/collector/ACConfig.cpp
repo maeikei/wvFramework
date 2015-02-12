@@ -31,9 +31,11 @@ bool ACConfig::gen(void)
   {
     {
       ofstream of;
+      LOG_INFO(root_.string() + "/cache/build/src/config.cpp");
       of.open(root_.string() + "/cache/build/src/config.cpp");
       of << cpp_;
       of.close();
+      LOG_INFO(root_.string() + "/cache/build/src/config.cpp");
     }
   }
   catch(const exception & e)
