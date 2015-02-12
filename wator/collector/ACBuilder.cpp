@@ -16,6 +16,16 @@ const static string constStrCMakeTemplate = "\n"
 "set(CMAKE_EXE_LINKER_FLAGS \"${CMAKE_EXE_LINKER_FLAGS} -std=c++11 -pthread\")\n"
 "set(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -Wall\")\n"
 "set(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -Wall\")\n"
+"file(GLOB orignal_SRC\n"
+"    \"app/*.hpp\"\n"
+"    \"app/*.cpp\"\n"
+"    \"app/Http/*.hpp\"\n"
+"    \"app/Http/*.cpp\"\n"
+"    \"app/Http/Controllers/*.hpp\"\n"
+"    \"app/Http/Controllers/*.cpp\"\n"
+"    \"config/*.hpp\"\n"
+"    \"config/*.cpp\"\n"
+")\n"
 ;
 
 
