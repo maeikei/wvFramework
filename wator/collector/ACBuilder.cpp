@@ -85,6 +85,10 @@ bool ACBuilder::gen(void)
   {
     LOG_FATAL(e.what());
   }
+  catch(FileException& e)
+  {
+    LOG_FATAL(e.what());
+  }
   
   return true;
 }
