@@ -1,5 +1,6 @@
 #include "ACConfig.hpp"
 using namespace wator::ac;
+using namespace std;
 
 const static string constStrConfigCppTemplate = 
 "/*Auto generated file DO not modify!!!! */\n"
