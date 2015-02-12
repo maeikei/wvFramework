@@ -9,7 +9,7 @@ using namespace std;
 #include <boost/algorithm/string.hpp>
 
 
-const static string constStrCMakeTemplate = "\n"
+const static string constStrCMakeTemplate = 
 "project(#{name})\n"
 "cmake_minimum_required(VERSION 2.8)\n"
 "include_directories(#{root})\n"
@@ -32,17 +32,19 @@ const static string constStrCMakeTemplate = "\n"
 "    \"cache/build/ac/*.hpp\"\n"
 "    \"cache/build/ac/*.cpp\"\n"
 ")\n"
-"add_library(#{name} SHARED ${orignal_SRC} ${ac_SRC})"
+"add_library(#{name} SHARED ${orignal_SRC} ${ac_SRC})\n"
+"\n"
 ;
 
 
 
-const static string constStrBuildCmdTemplate = "\n"
+const static string constStrBuildCmdTemplate =
 "all:\n"
 "\t mkdir -p #{root}/cache/build/objects\n"
 "\t cd #{root}/cache/build/objects && cmake -DCMAKE_INSTALL_PREFIX=#{root}/runtime/ #{root} \n"
 "\t cd #{root}/cache/build/objects && make install\n"
 "clean:\n"
+"\n"
 ;
 
 
