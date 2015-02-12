@@ -42,7 +42,7 @@ bool ACConfig::gen(void)
   {
     LOG_FATAL(e.what());
   }
-  catch(FileException& e)
+  catch(ifstream::failure& e)
   {
     LOG_FATAL(e.what());
   }
