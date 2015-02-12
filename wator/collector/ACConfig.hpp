@@ -13,6 +13,9 @@ namespace ac {
       bool gen(void);
     private:
       ACConfig();
+    private:
+      fs::path root_;
+      std::string cpp_;
   };
 } // ac
 } // wator
