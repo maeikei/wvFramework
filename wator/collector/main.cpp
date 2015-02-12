@@ -5,8 +5,9 @@ using namespace std;
 namespace fs = boost::filesystem;
 
 #include "ACController.hpp"
-#include "ACBuilder.hpp"
 #include "ACModel.hpp"
+#include "ACBuilder.hpp"
+#include "ACConfig.hpp"
 using namespace wator::ac;
 #include "debug.h"
 
