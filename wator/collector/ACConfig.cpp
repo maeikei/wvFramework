@@ -2,6 +2,8 @@
 using namespace wator::ac;
 using namespace std;
 
+#include "debug.h"
+
 const static string constStrConfigCppTemplate = 
 "/*Auto generated file DO not modify!!!! */\n"
 "namespace wator {\n"
