@@ -31,7 +31,7 @@ bool ACConfig::gen(void)
   {
     {
       ofstream of;
-      of.open(root_.string() + "cache/build/src/config.cpp");
+      of.open(root_.string() + "/cache/build/src/config.cpp");
       of << cpp_;
       of.close();
     }
