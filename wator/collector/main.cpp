@@ -84,4 +84,8 @@ void collector_main(const fs::path &root)
       return;
     }
   }
+  string cmd("make -C ");
+  cmd += root.string();
+  cmd += " -f build.mk";
+  ::system(cmd.c_str());
 }
