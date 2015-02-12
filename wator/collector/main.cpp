@@ -62,6 +62,11 @@ void collector_main(const fs::path &root)
   {
     return;
   }
+  ACConfig conf(root);
+  if(false == conf.gen())
+  {
+    return;
+  }
   /// all controller
   LOG_INFO(gBaseController);
   for(auto &ctrl: gAllControllers)
