@@ -10,7 +10,7 @@ struct app
 	| application. If disabled, a simple generic error page is shown.
 	|
 	*/
-	const bool debug = false;
+	static const bool debug = false;
   
 	/*
 	|--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ struct app
 	| your application so that it is used when running Artisan tasks.
 	|
 	*/
-	const string url = "http://localhost";
+	static const string url = "http://localhost";
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ struct app
 	| ahead and set this to a sensible default for you out of the box.
 	|
 	*/
-	const string timezone = "UTC";
+	static const string timezone = "UTC";
 
 	/*
 	|--------------------------------------------------------------------------
@@ -46,7 +46,7 @@ struct app
 	| to any of the locales which will be supported by the application.
 	|
 	*/
-	const string locale = "en";
+	static const string locale = "en";
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -58,7 +58,7 @@ struct app
 	| the language folders that are provided through your application.
 	|
 	*/
-	const string fallback_locale = "en";
+	static const string fallback_locale = "en";
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -70,8 +70,8 @@ struct app
 	| will not be safe. Please do this before deploying an application!
 	|
 	*/
-	const string key = "YourSecretKey!!!";
-	const string cipher = "128";
+	static const string key = "YourSecretKey!!!";
+	static const string cipher = "128";
 
 	/*
 	|--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ struct app
 	| Available Settings: "single", "daily", "syslog"
 	|
 	*/
-	const string log = "daily";	
+	static const string log = "daily";	
 	
 	
 };
