@@ -10,12 +10,13 @@ const static string constStrConfigCppTemplate =
 "/*Auto generated file DO not modify!!!! */\n"
 "#include <string>\n"
 "using namespace std;\n"
+"#include <app.hpp>\n"
 "namespace wator {\n"
-"namespace autogen {\n"
+"namespace http {\n"
 "#include <config/app.hpp>\n"
-"} // autogen\n"
+"} // http\n"
 "} // wator\n"
-"wator::autogen::app globalApp;"
+"wator::http::app globalApp;"
 "\n"
 ;
 
