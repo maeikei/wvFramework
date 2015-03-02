@@ -22,7 +22,7 @@ struct app
 	| your application so that it is used when running Artisan tasks.
 	|
 	*/
-	static const string url = "http://localhost";
+	static const char url[] = "http://localhost";
 	
 	/*
 	|--------------------------------------------------------------------------
