@@ -32,9 +32,10 @@ const static string constStrCMakeTemplate =
 "    cache/build/src/*.hpp\n"
 "    cache/build/src/*.cpp\n"
 ")\n"
-"message(${orignal_SRC})\n"
+"#message(${orignal_SRC})\n"
 "message(${ac_SRC})\n"
-"add_library(#{name} SHARED ${orignal_SRC} ${ac_SRC})\n"
+"#add_library(#{name} SHARED ${orignal_SRC} ${ac_SRC})\n"
+"add_library(#{name} SHARED ${ac_SRC})\n"
 "install(TARGETS #{name} DESTINATION lib)\n"
 "\n"
 ;
