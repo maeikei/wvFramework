@@ -11,12 +11,8 @@ const static string constStrConfigCppTemplate =
 "#include <string>\n"
 "using namespace std;\n"
 "#include <app.hpp>\n"
-"namespace wator {\n"
-"namespace http {\n"
+"using namespace wator::http;\n"
 "#include <config/app.cpp>\n"
-"} // http\n"
-"} // wator\n"
-"wator::http::app globalApp;"
 "\n"
 ;
 
